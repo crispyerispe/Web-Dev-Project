@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="form-results" id="results"></div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Cosmic</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"></li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="file:///C:/Users/User/Documents/html%20project%202.0/index.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News Feed</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Admin</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="file:///C:/Users/User/Documents/project1/cards.html"
+              >Company Profiles</a
+            >4
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="file:///C:/Users/User/Documents/html%20project%202.0/user_form.html"
+              >New User</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- navbar end -->
+    <script>
+      const resultsList = document.getElementById("results");
+      new URLSearchParams(window.location.search).forEach((value, name) => {
+        resultsList.append(`${name}: ${value}`);
+        resultsList.append(document.createElement("br"));
+      });
+    </script>
+    <p>Your Results Have Been Recorded As The Following</p>
+  </body>
+</html>
